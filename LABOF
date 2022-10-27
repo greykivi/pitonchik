@@ -1,0 +1,83 @@
+using Microsoft.VisualBasic.Logging;
+
+namespace Kyrs
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label4.Text = "";
+            label5.Text = "";
+            if ((textBox2.Text == "") & (textBox1.Text == ""))
+            {
+                label4.Text = "Номер то введи";
+                label5.Text = "ФИО то введи";
+                //MessageBox.Show("Введите ФИО и Номер Телефона");
+            }
+            else if (textBox2.Text == "")
+            {
+                //MessageBox.Show("Введите Номер Телефона");
+                label4.Text = "Заполните поле";
+            }
+
+            else if (textBox1.Text == "")
+            {
+                //MessageBox.Show("Введите ФИО");
+                label5.Text = "Заполните поле";
+            }
+
+            else
+            {
+                Form2 form = new Form2();
+                form.ShowDialog();
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string fio = textBox1.Text.ToString();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string telephon = textBox2.Text.ToString();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+}
